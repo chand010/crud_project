@@ -122,4 +122,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-ALLOWED_HOSTS = ['crud_project.herokuapp.com']
+# Add to ALLOWED_HOSTS
+ALLOWED_HOSTS = ['crud-project.onrender.com', 'localhost']
+
+# Add Whitenoise middleware
+MIDDLEWARE = [
+    # ...
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # ...
+]
+
+# Configure static files
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
