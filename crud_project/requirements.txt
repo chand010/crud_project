@@ -1,0 +1,4 @@
+# In requirements.txt
+django
+gunicorn
+whitenoise
