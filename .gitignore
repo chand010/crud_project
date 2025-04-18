@@ -4,3 +4,9 @@ venv/
 db.sqlite3
 *.log
 .idea/
+__pycache__/
+venv/
+.env
+db.sqlite3
+*.log
+.idea/
